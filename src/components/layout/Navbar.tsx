@@ -29,7 +29,7 @@ export default function Navbar() {
       <div
         className="border-b"
         style={{
-          background: 'rgba(7, 8, 13, 0.88)',
+          background: 'rgba(7, 8, 13, 0.96)',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
           borderColor: 'var(--border-subtle)',
@@ -43,7 +43,7 @@ export default function Navbar() {
           <Link
             href="/"
             className="flex items-center gap-3 group"
-            aria-label="Coldplay x Minecraft — Home"
+            aria-label="Concert x Minecraft — Home"
           >
             <div className="w-8 h-8 relative">
               {/* Minecraft-style logo block */}
@@ -64,7 +64,7 @@ export default function Navbar() {
               className="font-display text-lg tracking-tight text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors"
               style={{ letterSpacing: '-0.01em' }}
             >
-              Coldplay <span className="text-[var(--accent-teal)] italic">×</span> Minecraft
+              Concert <span className="text-[var(--accent-teal)] italic">×</span> Minecraft
             </span>
           </Link>
 
@@ -72,7 +72,6 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <Link href="/#event" className="nav-link">Event</Link>
             <Link href="/tickets" className="nav-link">Tickets</Link>
-            <Link href="/#faq" className="nav-link">FAQ</Link>
             {user ? (
               <span className="nav-link cursor-default">
                 {user.user_metadata?.name || user.email?.split('@')[0] || 'Account'}
@@ -110,7 +109,6 @@ export default function Navbar() {
           >
             <Link href="/#event"  className="nav-link" onClick={() => setOpen(false)}>Event</Link>
             <Link href="/tickets" className="nav-link" onClick={() => setOpen(false)}>Tickets</Link>
-            <Link href="/#faq"    className="nav-link" onClick={() => setOpen(false)}>FAQ</Link>
             {user ? (
               <span className="nav-link cursor-default">
                 {user.user_metadata?.name || user.email?.split('@')[0] || 'Account'}

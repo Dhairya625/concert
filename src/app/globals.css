@@ -3,7 +3,7 @@
 
 /* ============================================
    PREMIUM DESIGN TOKENS
-   Coldplay × Minecraft — Editorial Aesthetic
+   The Concert × Minecraft — Editorial Aesthetic
    ============================================ */
 :root {
   /* Backgrounds — deep, atmospheric */
@@ -26,7 +26,7 @@
   --text-faint:    rgba(245, 240, 225, 0.28);
 
   /* Accents — muted, sophisticated */
-  --accent-teal:    #5eead4;          /* soft Coldplay teal */
+  --accent-teal:    #5eead4;          /* soft Concert teal */
   --accent-teal-dim: #2dd4bf;
   --accent-purple:  #a78bfa;          /* muted Minecraft enchant */
   --accent-purple-dim: #8b5cf6;
@@ -256,7 +256,7 @@ body {
 /* ============================================
    GRADIENT TEXT — soft, tasteful
    ============================================ */
-.gradient-text-coldplay {
+.gradient-text-primary {
   background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-teal) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

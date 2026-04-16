@@ -8,7 +8,7 @@ export const TICKET_TYPES: TicketType[] = [
     name: 'Rabadies',
     price: 6900, // ₹69 in paise
     priceDisplay: '₹69',
-    description: 'General admission. Experience Coldplay in the Minecraft world.',
+    description: 'General admission. Experience the band in the Minecraft world.',
     perks: [
       'Full concert access',
       'Minecraft world exploration',

@@ -139,17 +139,14 @@ export default function HeroSection() {
             letterSpacing: '-0.03em',
           }}
         >
-          <span className="block gradient-text-coldplay">Experience</span>
-          <span className="block section-heading-italic text-secondary mt-2" style={{ fontSize: '0.55em' }}>
-            a head full of dreams
-          </span>
-          <span className="block font-body text-[var(--text-faint)] lowercase tracking-widest text-[0.45em] mt-8 mb-2">
-            inside
+          <span className="block gradient-text-primary">Experience</span>
+          <span className="block section-heading-italic text-secondary mt-2 mb-6" style={{ fontSize: '0.55em' }}>
+            a concert inside
           </span>
           <span 
             className={`block ${pressStart2P.className} text-white`} 
             style={{ 
-              fontSize: '0.85em',
+              fontSize: 'clamp(1rem, 0.45rem + 3.5vw, 0.85em)',
               textShadow: '0 4px 12px rgba(255,255,255,0.25), 0 2px 4px rgba(0,0,0,0.8)'
             }}
           >
@@ -161,18 +158,18 @@ export default function HeroSection() {
           className="font-body text-secondary mt-10 max-w-xl mx-auto leading-relaxed animate-fade-in"
           style={{ fontSize: 'clamp(1rem, 0.95rem + 0.3vw, 1.15rem)', animationDelay: '0.3s', animationFillMode: 'both' }}
         >
-          The first concert performed inside a world of blocks. Coldplay&apos;s greatest hits, rebuilt
+          The first concert performed inside a world of blocks. The band&apos;s greatest hits, rebuilt
           inside Minecraft&apos;s most breathtaking landscapes. One night. One dimension.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12 animate-fade-in" style={{ animationDelay: '0.5s', animationFillMode: 'both' }}>
-          <Link href="/tickets">
-            <PixelButton size="lg" variant="primary">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 mt-12 w-full max-w-sm mx-auto sm:max-w-none animate-fade-in" style={{ animationDelay: '0.5s', animationFillMode: 'both' }}>
+          <Link href="/tickets" className="w-full sm:w-auto">
+            <PixelButton size="lg" variant="primary" className="w-full justify-center">
               Reserve a seat
             </PixelButton>
           </Link>
-          <Link href="/#event">
-            <PixelButton variant="secondary" size="lg">
+          <Link href="/#event" className="w-full sm:w-auto">
+            <PixelButton variant="secondary" size="lg" className="w-full justify-center">
               Explore the show
             </PixelButton>
           </Link>

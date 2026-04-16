@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Coldplay: A Head Full of Dreams — Minecraft Edition',
+  title: 'The Concert: A Head Full of Dreams — Minecraft Edition',
   description:
-    'Experience the most immersive concert in history. Coldplay performs live inside Minecraft. Get your tickets now.',
+    'Experience the most immersive concert in history. The band performs live inside Minecraft. Get your tickets now.',
   openGraph: {
-    title: 'Coldplay × Minecraft Live Concert',
+    title: 'The Concert × Minecraft Live',
     description: 'The world inside the world. One night only.',
     type: 'website',
   },

@@ -3,7 +3,7 @@ import Navbar from '@/components/layout/Navbar'
 import StarField from '@/components/particles/StarField'
 import LoginClient from './LoginClient'
 
-export const metadata = { title: 'Login — Coldplay × Minecraft' }
+export const metadata = { title: 'Login — The Concert × Minecraft' }
 
 export default function LoginPage() {
   return (

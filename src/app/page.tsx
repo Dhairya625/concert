@@ -34,7 +34,7 @@ export default function HomePage() {
               <span className="eyebrow-line" />
             </div>
             <h2
-              className="font-display gradient-text-coldplay mb-6"
+              className="font-display gradient-text-primary mb-6"
               style={{ fontSize: 'clamp(1.5rem, 1rem + 2.5vw, 2.8rem)' }}
             >
               Don&apos;t miss your block

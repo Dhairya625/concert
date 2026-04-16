@@ -15,7 +15,7 @@ export default function Footer() {
           <div>
             <h3 className="eyebrow text-[var(--accent-teal)] mb-4">
               <span className="eyebrow-dot" />
-              Coldplay x Minecraft
+              The Concert x Minecraft
             </h3>
             <p className="font-body text-sm text-[var(--text-muted)] leading-relaxed">
               A Head Full of Dreams inside a world of blocks. One night. Forever.
@@ -66,7 +66,7 @@ export default function Footer() {
           style={{ borderTop: '1px solid var(--border-subtle)' }}
         >
           <p className="eyebrow text-[var(--text-faint)]">
-            2025 Coldplay x Minecraft. All blocks reserved.
+            2025 The Concert x Minecraft. All blocks reserved.
           </p>
           <p className="font-body text-xs text-[var(--text-faint)]">
             Powered by Razorpay · Supabase · Next.js

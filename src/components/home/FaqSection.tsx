@@ -18,7 +18,7 @@ const FAQS: Faq[] = [
   },
   {
     q: 'Is there a refund policy?',
-    a: 'Refunds are available up to seven days before the event (September 13, 2025). After that, tickets are non-refundable but transferable. Reach support@coldplaymc.com for help.',
+    a: 'Refunds are available up to seven days before the event (September 13, 2025). After that, tickets are non-refundable but transferable. Reach support@concertmc.com for help.',
   },
   {
     q: 'What is included in the Golden Beacon tier?',
@@ -76,7 +76,7 @@ export default function FaqSection() {
           </div>
           <h2 className="section-heading">
             <span className="section-heading-italic text-secondary">Your</span>{' '}
-            <span className="gradient-text-coldplay">questions</span>
+            <span className="gradient-text-primary">questions</span>
           </h2>
         </div>
 

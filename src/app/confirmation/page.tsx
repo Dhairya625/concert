@@ -4,7 +4,7 @@ import Footer from '@/components/layout/Footer'
 import StarField from '@/components/particles/StarField'
 import ConfirmationClient from './ConfirmationClient'
 
-export const metadata = { title: 'Booking Confirmed — Coldplay × Minecraft' }
+export const metadata = { title: 'Booking Confirmed — The Concert × Minecraft' }
 
 export default function ConfirmationPage() {
   return (

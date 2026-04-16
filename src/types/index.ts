@@ -1,5 +1,5 @@
 // ============================================
-// DOMAIN TYPES — Coldplay × Minecraft Tickets
+// DOMAIN TYPES — Concert × Minecraft Tickets
 // ============================================
 
 export type TicketTier = 'standard' | 'emerald' | 'diamond' | 'vip'

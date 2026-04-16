@@ -243,11 +243,11 @@ export default function TicketsPageClient() {
           </span>
           <span className="eyebrow-line" />
         </div>
-        <h1 className="section-heading gradient-text-coldplay mb-3">
+        <h1 className="section-heading gradient-text-primary mb-3">
           Concert Ticket
         </h1>
         <p className="font-body text-[var(--text-muted)] max-w-xl mx-auto text-sm">
-          Single ticket price for the Coldplay Minecraft concert.
+          Single ticket price for the Minecraft concert.
           Includes full concert access and a digital commemorative collectible.
         </p>
       </div>
@@ -326,7 +326,7 @@ export default function TicketsPageClient() {
             <h3 className="eyebrow text-[var(--text-secondary)] mb-6 text-left" style={{ color: selected.color }}>
               Passenger Details
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 mb-8">
               <FormField
                 label="First Name"
                 id="firstName"
@@ -365,9 +365,10 @@ export default function TicketsPageClient() {
               />
             </div>
             
-            <div className="flex justify-end">
+            <div className="flex justify-end mt-2">
               <PixelButton
                 size="lg"
+                className="w-full sm:w-auto justify-center"
                 loading={loading}
                 onClick={handlePayment}
                 style={{
@@ -391,9 +392,9 @@ export default function TicketsPageClient() {
       {/* QR Code Modal Overlay */}
       {showQRCode && (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4 animate-fade-in">
-          <div className="bg-[var(--bg-surface)] border border-[var(--border-default)] rounded-lg p-8 max-w-md w-full space-y-6 text-center shadow-2xl">
+          <div className="bg-[var(--bg-surface)] border border-[var(--border-default)] rounded-lg p-5 sm:p-8 max-w-md w-full space-y-6 text-center shadow-2xl max-h-[90vh] overflow-y-auto">
             <div>
-              <h2 className="section-heading gradient-text-coldplay mb-2">Payment</h2>
+              <h2 className="section-heading gradient-text-primary mb-2">Payment</h2>
               <p className="font-body text-sm text-[var(--text-secondary)]">Scan this QR code to complete your booking</p>
             </div>
 
@@ -423,18 +424,18 @@ export default function TicketsPageClient() {
               </ul>
             </div>
 
-            <div className="flex gap-3 pt-2">
+            <div className="flex flex-col-reverse sm:flex-row gap-3 pt-4">
               <button
                 onClick={() => {
                   setShowQRCode(false)
                 }}
-                className="flex-1 px-4 py-2 border border-[var(--border-default)] rounded font-body text-sm text-[var(--text-secondary)] hover:bg-[var(--bg-subtle)] transition-colors"
+                className="w-full sm:w-1/2 px-4 py-3 sm:py-2 border border-[var(--border-default)] rounded font-body text-sm text-[var(--text-secondary)] hover:bg-[var(--bg-subtle)] transition-colors"
               >
                 Cancel
               </button>
               <PixelButton
                 onClick={handlePaymentComplete}
-                className="flex-1 justify-center"
+                className="w-full sm:w-1/2 justify-center"
                 size="sm"
               >
                 I have paid

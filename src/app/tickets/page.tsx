@@ -4,8 +4,8 @@ import StarField from '@/components/particles/StarField'
 import TicketsPageClient from './TicketsPageClient'
 
 export const metadata = {
-  title: 'Buy Tickets — Coldplay × Minecraft',
-  description: 'Choose your ticket tier and secure your spot at the Coldplay Minecraft concert.',
+  title: 'Buy Tickets — The Concert × Minecraft',
+  description: 'Choose your ticket tier and secure your spot at the Minecraft concert.',
 }
 
 export default function TicketsPage() {

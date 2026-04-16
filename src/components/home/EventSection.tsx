@@ -65,7 +65,7 @@ export default function EventSection() {
             </span>
             <span className="eyebrow-line" />
           </div>
-          <h2 className="section-heading gradient-text-coldplay mb-4">
+          <h2 className="section-heading gradient-text-primary mb-4">
             More Than a Concert
           </h2>
           <p className="font-body text-[var(--text-muted)] max-w-xl mx-auto text-base leading-relaxed">
