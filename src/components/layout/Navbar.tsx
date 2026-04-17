@@ -74,7 +74,7 @@ export default function Navbar() {
             <Link href="/tickets" className="nav-link">Tickets</Link>
             {user ? (
               <span className="nav-link cursor-default">
-                {user.user_metadata?.name || user.email?.split('@')[0] || 'Account'}
+                {user.email || user.user_metadata?.name || 'Account'}
               </span>
             ) : (
               <Link href="/auth/login" className="nav-link">Login</Link>
@@ -111,7 +111,7 @@ export default function Navbar() {
             <Link href="/tickets" className="nav-link" onClick={() => setOpen(false)}>Tickets</Link>
             {user ? (
               <span className="nav-link cursor-default">
-                {user.user_metadata?.name || user.email?.split('@')[0] || 'Account'}
+                {user.email || user.user_metadata?.name || 'Account'}
               </span>
             ) : (
               <Link href="/auth/login" className="nav-link" onClick={() => setOpen(false)}>Login</Link>
