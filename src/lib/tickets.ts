@@ -3,9 +3,9 @@ import type { TicketType } from '@/types'
 // Static ticket config — synced with DB seed
 export const TICKET_TYPES: TicketType[] = [
   {
-    id: 'rabadies',
+    id: 'rabdies',
     tier: 'standard',
-    name: 'Rabadies',
+    name: 'Rabdies',
     price: 6900, // ₹69 in paise
     priceDisplay: '₹69',
     description: 'General admission. Experience the band in the Minecraft world.',
