@@ -6,7 +6,6 @@ import Image from 'next/image'
 import { TICKET_TYPES } from '@/lib/tickets'
 import type { TicketType, BookingFormData } from '@/types'
 import PixelButton from '@/components/ui/PixelButton'
-import TicketAvailabilityBar from '@/components/ui/TicketAvailabilityBar'
 import { createClient } from '@/lib/supabase/client'
 import { PAYMENT_CONFIG } from '@/lib/payment-config'
 
@@ -116,12 +115,7 @@ function TicketCard({
         ))}
       </ul>
 
-      {/* Availability */}
-      <TicketAvailabilityBar
-        available={ticket.available}
-        total={ticket.total}
-        color={ticket.color}
-      />
+
     </article>
   )
 }
@@ -331,7 +325,7 @@ export default function TicketsPageClient() {
                 label="First Name"
                 id="firstName"
                 type="text"
-                placeholder="Chris"
+                placeholder="John"
                 value={form.firstName}
                 onChange={e => update('firstName', e.target.value)}
                 error={errors.firstName}
@@ -340,7 +334,7 @@ export default function TicketsPageClient() {
                 label="Last Name"
                 id="lastName"
                 type="text"
-                placeholder="Martin"
+                placeholder="Doe"
                 value={form.lastName}
                 onChange={e => update('lastName', e.target.value)}
                 error={errors.lastName}

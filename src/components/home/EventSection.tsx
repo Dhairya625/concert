@@ -13,7 +13,7 @@ const FEATURES: Feature[] = [
   {
     icon: Music,
     title: 'Live Performance',
-    desc: 'Dhairya and Nandish performs their greatest hits live in a custom-built Minecraft concert arena spanning 5000 blocks.',
+    desc: 'Experience the greatest hits live in a custom-built Minecraft concert arena with stunning visuals and immersive sound.',
     accent: 'var(--accent-teal)',
   },
   {
@@ -108,11 +108,10 @@ export default function EventSection() {
 
         {/* Stats bar */}
         <div
-          className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-px"
+          className="mt-16 grid grid-cols-2 md:grid-cols-2 gap-px"
           style={{ background: 'var(--border-subtle)' }}
         >
           {[
-            { value: '5,000+', label: 'Blocks Built' },
             { value: '1',      label: 'Night Only' },
             { value: '\u221E',  label: 'Memories' },
           ].map(stat => (

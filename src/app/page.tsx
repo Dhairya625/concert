@@ -39,10 +39,10 @@ export default function HomePage() {
             >
               Don&apos;t miss your block
             </h2>
-            <p className="font-body text-[var(--text-muted)] mb-8 max-w-lg mx-auto">
+            {/* <p className="font-body text-[var(--text-muted)] mb-8 max-w-lg mx-auto">
               750 tickets total. When they&apos;re gone, they&apos;re gone forever.
               VIP spots are already 60% sold.
-            </p>
+            </p> */}
             <Link href="/tickets">
               <PixelButton size="lg">
                 Secure Your Ticket

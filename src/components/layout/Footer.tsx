@@ -18,7 +18,7 @@ export default function Footer() {
               The Concert x Minecraft
             </h3>
             <p className="font-body text-sm text-[var(--text-muted)] leading-relaxed">
-              A Head Full of Dreams inside a world of blocks. One night. Forever.
+              Witness an unprecedented Minecraft concert experience. One night. Forever.
             </p>
           </div>
 
@@ -31,7 +31,6 @@ export default function Footer() {
               {[
                 { href: '/', label: 'Home' },
                 { href: '/tickets', label: 'Buy Tickets' },
-                { href: '/#faq', label: 'FAQ' },
                 { href: '/auth/login', label: 'My Account' },
               ].map(link => (
                 <li key={link.href}>
@@ -66,10 +65,7 @@ export default function Footer() {
           style={{ borderTop: '1px solid var(--border-subtle)' }}
         >
           <p className="eyebrow text-[var(--text-faint)]">
-            2025 The Concert x Minecraft. All blocks reserved.
-          </p>
-          <p className="font-body text-xs text-[var(--text-faint)]">
-            Powered by Razorpay · Supabase · Next.js
+            2025 The Concert x Minecraft. All rights reserved.
           </p>
         </div>
       </div>
