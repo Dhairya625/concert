@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&family=Press+Start+2P&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-space-grotesk), sans-serif;
+}
 
 /* ============================================
    PREMIUM DESIGN TOKENS
@@ -7,63 +11,73 @@
    ============================================ */
 :root {
   /* Backgrounds — deep, atmospheric */
-  --bg-void:     #07080d;   /* near-black with hint of navy */
-  --bg-deep:     #0b0e17;
-  --bg-surface:  #11151f;
+  --bg-void: #07080d;
+  /* near-black with hint of navy */
+  --bg-deep: #0b0e17;
+  --bg-surface: #11151f;
   --bg-elevated: #161a26;
-  --bg-card:     #1a1f2e;
-  --bg-overlay:  rgba(11, 14, 23, 0.85);
+  --bg-card: #1a1f2e;
+  --bg-overlay: rgba(11, 14, 23, 0.85);
 
   /* Borders */
-  --border-subtle:  rgba(245, 240, 225, 0.06);
+  --border-subtle: rgba(245, 240, 225, 0.06);
   --border-default: rgba(245, 240, 225, 0.12);
-  --border-strong:  rgba(245, 240, 225, 0.22);
+  --border-strong: rgba(245, 240, 225, 0.22);
 
   /* Text */
-  --text-primary:  #f5f0e1;          /* warm beige white */
+  --text-primary: #f5f0e1;
+  /* warm beige white */
   --text-secondary: rgba(245, 240, 225, 0.72);
-  --text-muted:    rgba(245, 240, 225, 0.48);
-  --text-faint:    rgba(245, 240, 225, 0.28);
+  --text-muted: rgba(245, 240, 225, 0.48);
+  --text-faint: rgba(245, 240, 225, 0.28);
 
   /* Accents — muted, sophisticated */
-  --accent-teal:    #5eead4;          /* soft Concert teal */
+  --accent-teal: #5eead4;
+  /* soft Concert teal */
   --accent-teal-dim: #2dd4bf;
-  --accent-purple:  #a78bfa;          /* muted Minecraft enchant */
+  --accent-purple: #a78bfa;
+  /* muted Minecraft enchant */
   --accent-purple-dim: #8b5cf6;
-  --accent-beige:   #d4c5a0;          /* warm brass */
-  --accent-emerald: #6ee7b7;          /* subtle Minecraft emerald */
-  --accent-rose:    #fda4af;          /* gentle warm */
-  --accent-amber:   #fcd34d;          /* muted gold (rarely) */
+  --accent-beige: #d4c5a0;
+  /* warm brass */
+  --accent-emerald: #6ee7b7;
+  /* subtle Minecraft emerald */
+  --accent-rose: #fda4af;
+  /* gentle warm */
+  --accent-amber: #fcd34d;
+  /* muted gold (rarely) */
 
   /* Tier colors — refined, not neon */
   --tier-emerald: #6ee7b7;
   --tier-diamond: #67e8f9;
-  --tier-vip:     #d4c5a0;
+  --tier-vip: #d4c5a0;
 
   /* Soft glows — barely there */
-  --glow-soft-teal:   0 0 24px rgba(94, 234, 212, 0.18);
+  --glow-soft-teal: 0 0 24px rgba(94, 234, 212, 0.18);
   --glow-soft-purple: 0 0 24px rgba(167, 139, 250, 0.18);
-  --glow-soft-beige:  0 0 24px rgba(212, 197, 160, 0.15);
+  --glow-soft-beige: 0 0 24px rgba(212, 197, 160, 0.15);
   --glow-soft-emerald: 0 0 24px rgba(110, 231, 183, 0.15);
 
   /* Typography */
   --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
-  --font-body:    'Space Grotesk', system-ui, sans-serif;
-  --font-mono:    'JetBrains Mono', monospace;
-  --font-pixel:   'Press Start 2P', monospace;
+  --font-body: var(--font-space-grotesk), sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-pixel: 'Press Start 2P', monospace;
 
   /* Spacing */
   --space-section: clamp(5rem, 4rem + 5vw, 9rem);
 
   /* Easing */
   --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 /* ============================================
    BASE
    ============================================ */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -94,10 +108,25 @@ body {
 /* ============================================
    FONT UTILITIES
    ============================================ */
-.font-display { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.02em; }
-.font-body    { font-family: var(--font-body); }
-.font-mono    { font-family: var(--font-mono); }
-.font-pixel   { font-family: var(--font-pixel); letter-spacing: 0.05em; line-height: 1.6; }
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-pixel {
+  font-family: var(--font-pixel);
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
 
 /* ============================================
    EYEBROW LABEL — replaces "pixel-badge"
@@ -173,8 +202,21 @@ body {
   opacity: 0.5;
   transition: opacity 0.4s var(--ease-out-soft), border-color 0.4s var(--ease-out-soft);
 }
-.pixel-card::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
-.pixel-card::after  { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+.pixel-card::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.pixel-card::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+}
+
 .pixel-card:hover::before,
 .pixel-card:hover::after {
   opacity: 1;
@@ -216,25 +258,32 @@ body {
   pointer-events: none;
 }
 
-.pixel-btn:hover::before { opacity: 1; }
+.pixel-btn:hover::before {
+  opacity: 1;
+}
 
 .pixel-btn-primary {
   background: var(--text-primary);
   color: var(--bg-void);
   border-color: var(--text-primary);
 }
+
 .pixel-btn-primary:hover {
   background: var(--accent-beige);
   border-color: var(--accent-beige);
   box-shadow: var(--glow-soft-beige);
 }
-.pixel-btn-primary::before { display: none; }
+
+.pixel-btn-primary::before {
+  display: none;
+}
 
 .pixel-btn-secondary {
   background: transparent;
   color: var(--text-primary);
   border-color: var(--border-strong);
 }
+
 .pixel-btn-secondary:hover {
   border-color: var(--accent-teal);
   color: var(--accent-teal);
@@ -246,12 +295,15 @@ body {
   color: var(--accent-rose);
   border-color: rgba(253, 164, 175, 0.4);
 }
+
 .pixel-btn-danger:hover {
   background: rgba(253, 164, 175, 0.06);
   border-color: var(--accent-rose);
 }
 
-.pixel-btn:active { transform: translateY(1px); }
+.pixel-btn:active {
+  transform: translateY(1px);
+}
 
 /* ============================================
    GRADIENT TEXT — soft, tasteful
@@ -274,59 +326,146 @@ body {
    ATMOSPHERIC ANIMATIONS
    ============================================ */
 @keyframes drift-up {
-  0%   { transform: translateY(0) translateX(0); opacity: 0; }
-  10%  { opacity: 1; }
-  90%  { opacity: 0.4; }
-  100% { transform: translateY(-100vh) translateX(20px); opacity: 0; }
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: translateY(-100vh) translateX(20px);
+    opacity: 0;
+  }
 }
 
 @keyframes pulse-soft {
-  0%, 100% { opacity: 0.4; }
-  50%      { opacity: 0.85; }
+
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 0.85;
+  }
 }
 
 @keyframes pulse-glow-soft {
-  0%, 100% { box-shadow: 0 0 0 rgba(94, 234, 212, 0); }
-  50%      { box-shadow: 0 0 30px rgba(94, 234, 212, 0.15); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(94, 234, 212, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 30px rgba(94, 234, 212, 0.15);
+  }
 }
 
 @keyframes slide-in-up {
-  from { transform: translateY(20px); opacity: 0; }
-  to   { transform: translateY(0);    opacity: 1; }
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slide-in-fade {
-  from { transform: translateY(8px); opacity: 0; }
-  to   { transform: translateY(0);   opacity: 1; }
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes shimmer {
-  0%   { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 @keyframes float-gentle {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-6px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 @keyframes subtle-breathe {
-  0%, 100% { opacity: 0.6; transform: scale(1); }
-  50%      { opacity: 1; transform: scale(1.02); }
+
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
 }
 
-.animate-pulse-soft     { animation: pulse-soft 4s ease-in-out infinite; }
-.animate-pulse-glow     { animation: pulse-glow-soft 3.5s ease-in-out infinite; }
-.animate-slide-up       { animation: slide-in-up 0.7s var(--ease-out-soft) forwards; }
-.animate-slide-in-fade  { animation: slide-in-fade 0.6s var(--ease-out-soft) forwards; }
-.animate-fade-in        { animation: fade-in 1s var(--ease-out-soft) forwards; }
-.animate-float-gentle   { animation: float-gentle 5s ease-in-out infinite; }
-.animate-breathe        { animation: subtle-breathe 4s ease-in-out infinite; }
+.animate-pulse-soft {
+  animation: pulse-soft 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow-soft 3.5s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-in-up 0.7s var(--ease-out-soft) forwards;
+}
+
+.animate-slide-in-fade {
+  animation: slide-in-fade 0.6s var(--ease-out-soft) forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--ease-out-soft) forwards;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 5s ease-in-out infinite;
+}
+
+.animate-breathe {
+  animation: subtle-breathe 4s ease-in-out infinite;
+}
 
 /* ============================================
    SUBTLE MINECRAFT GRID OVERLAY
@@ -351,13 +490,22 @@ body {
 /* ============================================
    SCROLLBAR
    ============================================ */
-::-webkit-scrollbar         { width: 8px; }
-::-webkit-scrollbar-track   { background: var(--bg-deep); }
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+
 ::-webkit-scrollbar-thumb {
   background: var(--bg-elevated);
   border-radius: 4px;
 }
-::-webkit-scrollbar-thumb:hover { background: var(--border-strong); }
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+}
 
 /* ============================================
    FORM INPUT
@@ -376,14 +524,19 @@ body {
   border-radius: 2px;
 }
 
-.pixel-input:hover { border-color: var(--border-strong); }
+.pixel-input:hover {
+  border-color: var(--border-strong);
+}
+
 .pixel-input:focus {
   border-color: var(--accent-teal);
   background: var(--bg-elevated);
   box-shadow: 0 0 0 1px rgba(94, 234, 212, 0.2);
 }
 
-.pixel-input::placeholder { color: var(--text-faint); }
+.pixel-input::placeholder {
+  color: var(--text-faint);
+}
 
 /* ============================================
    TICKET CARD — refined tier styles
@@ -411,27 +564,46 @@ body {
   border-color: var(--border-strong);
   transform: translateY(-2px);
 }
-.ticket-card:hover::before { opacity: 1; }
+
+.ticket-card:hover::before {
+  opacity: 1;
+}
 
 .ticket-card.selected {
   border-color: var(--accent-teal);
   box-shadow: var(--glow-soft-teal);
 }
 
-.ticket-card.tier-vip.selected     { border-color: var(--accent-beige); box-shadow: var(--glow-soft-beige); }
-.ticket-card.tier-diamond.selected { border-color: var(--accent-teal);  box-shadow: var(--glow-soft-teal); }
-.ticket-card.tier-emerald.selected { border-color: var(--accent-emerald); box-shadow: var(--glow-soft-emerald); }
+.ticket-card.tier-vip.selected {
+  border-color: var(--accent-beige);
+  box-shadow: var(--glow-soft-beige);
+}
+
+.ticket-card.tier-diamond.selected {
+  border-color: var(--accent-teal);
+  box-shadow: var(--glow-soft-teal);
+}
+
+.ticket-card.tier-emerald.selected {
+  border-color: var(--accent-emerald);
+  box-shadow: var(--glow-soft-emerald);
+}
 
 /* Top stripe accent per tier */
 .ticket-card .tier-stripe {
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 2px;
   background: var(--accent-teal);
   opacity: 0.6;
   transition: opacity 0.5s var(--ease-out-soft);
 }
-.ticket-card:hover .tier-stripe { opacity: 1; }
+
+.ticket-card:hover .tier-stripe {
+  opacity: 1;
+}
 
 /* ============================================
    SECTION HEADINGS — editorial serif
@@ -468,7 +640,8 @@ body {
 .nav-link::after {
   content: '';
   position: absolute;
-  left: 0; bottom: 0;
+  left: 0;
+  bottom: 0;
   width: 100%;
   height: 1px;
   background: var(--accent-teal);
@@ -480,7 +653,10 @@ body {
 .nav-link:hover {
   color: var(--text-primary);
 }
-.nav-link:hover::after { transform: scaleX(1); }
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
 
 /* ============================================
    COUNTDOWN
@@ -575,24 +751,70 @@ body {
 /* ============================================
    UTILITY
    ============================================ */
-.no-scrollbar::-webkit-scrollbar { display: none; }
-.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 
-.text-teal    { color: var(--accent-teal); }
-.text-purple  { color: var(--accent-purple); }
-.text-beige   { color: var(--accent-beige); }
-.text-emerald { color: var(--accent-emerald); }
-.text-rose    { color: var(--accent-rose); }
-.text-primary { color: var(--text-primary); }
-.text-secondary { color: var(--text-secondary); }
-.text-muted   { color: var(--text-muted); }
-.text-faint   { color: var(--text-faint); }
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
-.border-default { border-color: var(--border-default); }
-.border-strong  { border-color: var(--border-strong); }
-.border-teal    { border-color: var(--accent-teal); }
-.border-purple  { border-color: var(--accent-purple); }
-.border-beige   { border-color: var(--accent-beige); }
+.text-teal {
+  color: var(--accent-teal);
+}
+
+.text-purple {
+  color: var(--accent-purple);
+}
+
+.text-beige {
+  color: var(--accent-beige);
+}
+
+.text-emerald {
+  color: var(--accent-emerald);
+}
+
+.text-rose {
+  color: var(--accent-rose);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-faint {
+  color: var(--text-faint);
+}
+
+.border-default {
+  border-color: var(--border-default);
+}
+
+.border-strong {
+  border-color: var(--border-strong);
+}
+
+.border-teal {
+  border-color: var(--accent-teal);
+}
+
+.border-purple {
+  border-color: var(--accent-purple);
+}
+
+.border-beige {
+  border-color: var(--accent-beige);
+}
 
 /* Refined focus ring */
 *:focus-visible {
@@ -605,6 +827,7 @@ body {
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
