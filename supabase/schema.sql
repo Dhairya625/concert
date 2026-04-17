@@ -21,9 +21,7 @@ create table if not exists ticket_types (
 
 -- Seed ticket types
 insert into ticket_types (id, name, price, total, available, description) values
-  ('emerald', 'Emerald Block',   69900,  500, 500, 'General admission'),
-  ('diamond', 'Diamond Block',  249900,  200, 200, 'Premium access'),
-  ('vip',     'Golden Beacon',  599900,   50,  50, 'Ultimate VIP')
+  ('rabdies', 'Rabdies', 6900, 500, 500, 'General admission. Experience the band in the Minecraft world.')
 on conflict (id) do nothing;
 
 -- ============================================
